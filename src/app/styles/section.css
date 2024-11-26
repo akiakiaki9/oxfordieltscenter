@@ -1,0 +1,165 @@
+.section {
+    background-image: url('/images/section-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #002154e2;
+    width: 100%;
+    height: 60vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-blok {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 10px;
+}
+
+.section-blok__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.section-blok__header p {
+    color: var(--blue-color);
+}
+
+.section-blok__header__icon {
+    color: var(--blue-color);
+}
+
+.section__h1-1 {
+    font-size: 290%;
+}
+
+.section__h1-1 span {
+    color: var(--red-color)
+}
+
+.section__h1-2 {
+    font-weight: 400;
+    font-size: 260%;
+    margin-bottom: 20px;
+}
+
+.section-blok__p {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.section-blok__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-blok__container a {
+    text-decoration: none;
+}
+
+.section-blok__container a button {
+    transition: .5s;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 105%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.section-blok__container-button-1 {
+    border: 2px solid var(--blue-color);
+    width: 200px;
+    background-color: var(--blue-color);
+}
+
+.section-blok__container-button-2 {
+    border: 2px solid #fff;
+    background: none;
+    width: 250px;
+}
+
+.section-blok__container-button-2:hover {
+    background-color: var(--red-color);
+    border-color: var(--red-color);
+    opacity: 1;
+}
+
+.section-blok__container__icon {
+    color: #fff;
+    width: 20px;
+    height: 20px;
+}
+
+.section-blok__container-button-1:hover {
+    opacity: .7;
+}
+
+@media (max-width: 938px) {
+    .section__h1-1 {
+        font-size: 250%;
+        text-align: center;
+    }
+
+    .section__h1-2 {
+        font-size: 220%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .section {
+        height: 70vh;
+    }
+
+    .section__h1-1 {
+        margin-bottom: 10px;
+        font-size: 220%;
+    }
+
+    .section__h1-2 {
+        margin-bottom: 30px;
+        font-size: 190%;
+    }
+
+    .section-blok__container {
+        gap: 10px;
+    }
+
+    .section-blok__container a button {
+        gap: 5px;
+        padding: 15px 10px;
+        font-size: 90%;
+    }
+
+    .section-blok__container-button-1 {
+        width: 150px;
+    }
+
+    .section-blok__container-button-2 {
+        width: 200px;
+    }
+
+    .section-blok__container__icon {
+        width: 20px;
+        height: 20px;
+    }
+}

@@ -1,0 +1,227 @@
+.about {
+    background-image: url('/images/about-home-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 10px;
+}
+
+.about-blok {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-blok__section-1 {}
+
+.about-blok__section-1 img {
+    width: 100%;
+    height: auto;
+}
+
+.about-blok__section-2 {}
+
+.about-blok__section-2 h1 {
+    margin-bottom: 25px;
+}
+
+.about-blok__section-2-p1 {
+    color: var(--text-color);
+    font-size: 105%;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.about-blok__section-2-p2 {
+    color: var(--text-color);
+    font-size: 105%;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.about-blok__section-2__header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.about-blok__section-2__header p {
+    color: var(--blue-color);
+}
+
+.about-blok__section-2__header__icon {
+    color: var(--blue-color);
+}
+
+.about-blok__section-2__container {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.about-blok__section-2__container-part {
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+}
+
+.about-blok__section-2__container-part img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.about-blok__section-2__container-part h2 {
+    font-weight: 500;
+}
+
+.about-blok__section-2__buttons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-blok__section-2__buttons a {
+    text-decoration: none;
+}
+
+.about-blok__section-2__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    border: none;
+    padding: 20px 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 200px;
+    font-size: 102%;
+    cursor: pointer;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.about-blok__section-2__button-1 {
+    background-color: var(--blue-color);
+}
+
+.about-blok__section-2__button-2 {
+    background-color: var(--red-color);
+}
+
+.about-blok__section-2__button:hover {
+    opacity: .6;
+}
+
+.about-blok__section-2__button:hover .about-blok__section-2__buttons__icon {
+    transform: translateX(5px);
+}
+
+.about-blok__section-2__buttons__icon {
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    transition: .5s;
+}
+
+@media (max-width: 890px) {
+    .about-blok {
+        flex-direction: column;
+    }
+
+    .about-blok__section-2-p1 {
+        max-width: 1000px;
+    }
+
+    .about-blok__section-2-p2 {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-blok__section-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 635px) {
+
+    .about-blok__section-2-p1 {
+        font-size: 100%;
+    }   
+
+    .about-blok__section-2-p2 {
+        font-size: 100%;
+    }
+
+    .about-blok__section-2__container {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .about-blok__section-2__container-part {}
+
+    .about-blok__section-2__container-part img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .about-blok__section-2__container-part h2 {
+        font-size: 150%;
+    }
+
+    .about-blok__section-2__buttons {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .about-blok__section-2__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        border: none;
+        padding: 20px 15px;
+        font-weight: bold;
+        border-radius: 10px;
+        width: 180px;
+        font-size: 100%;
+        cursor: pointer;
+        transition: .5s;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .about-blok__section-2__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        color: #fff;
+        border: none;
+        padding: 20px 5px;
+        font-weight: bold;
+        border-radius: 10px;
+        width: 150px;
+        font-size: 90%;
+        cursor: pointer;
+        transition: .5s;
+        text-decoration: none;
+    }
+}

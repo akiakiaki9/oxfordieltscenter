@@ -1,0 +1,51 @@
+.partners {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.partners-static {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px; /* Уменьшено расстояние между элементами */
+    justify-content: center;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.partners-static::-webkit-scrollbar {
+    height: 8px;
+}
+
+.partners-static::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 4px;
+}
+
+.partners-static::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.partners-mobile {
+    display: none;
+    width: 100%; /* Для адаптации под ширину экрана */
+}
+
+@media (max-width: 768px) {
+    .partners-static {
+        display: none;
+    }
+
+    .partners-mobile {
+        display: block;
+    }
+}
+
+.partner-item img, 
+.partners-mobile img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0; /* Убираем отступы */
+}

@@ -1,0 +1,229 @@
+.footer {
+    background-image: url('/images/footer-bg.png');
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 20px;
+}
+
+.footer-blok {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 10px 20px 10px;
+}
+
+.footer-blok__section-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-blok__section-1 a {
+    text-decoration: none;
+}
+
+.footer-blok__section-1 img {
+    width: 200px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.footer-blok__section-1 p {
+    color: var(--light-color);
+    max-width: 340px;
+    margin-bottom: 20px;
+}
+
+.footer-blok__section-1 h2 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-blok__section-1__container {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+
+.footer-blok__section-1__container a {
+    padding: 10px;
+    background-color: #00000033;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.footer-blok__section-1__container__icon {
+    width: 20px;
+    height: 20px;
+    color: var(--light-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer-blok__section-1__container a:hover {
+    background-color: var(--blue-color);
+    color: #fff;
+}
+
+.footer-blok__section-1__container a:hover .footer-blok__section-1__container__icon {
+    color: #fff;
+}
+
+.footer-blok__section-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.footer-blok__section-2-part {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-blok__section-2-part h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-blok__section-2-part a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    transition: .5s;
+    color: var(--light-color);
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footer-blok__section-2__icon {
+    font-size: 85%;
+    color: var(--light-color);
+}
+
+
+.footer-blok__section-2-part a:hover {
+    color: #fff;
+}
+
+.footer-blok__section-2-part a:hover .footer-blok__section-2__icon {
+    color: #fff;
+}
+
+.footer__line {
+    width: 70px;
+    height: 3px;
+    background-color: var(--blue-color);
+    margin-bottom: 20px;
+}
+
+.footer-blok__section-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-blok__section-3 h2 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-blok__section-3 p {
+    color: var(--light-color);
+    max-width: 350px;
+    
+}
+
+.footer-blok__section-3__container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 17px;
+}
+
+.footer-blok__section-3__container a {
+    color: var(--light-color);
+    transition: .5s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer-blok__section-3__container a:hover {
+    color: var(--blue-color);
+}
+
+.footer-blok__section-3__icon {
+    font-size: 110%;
+    color: var(--blue-color);
+}
+
+.footer-footer {
+    margin: 20px 20px 0 20px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #283752;
+    border-radius: 50px;
+}
+
+.footer-footer-blok {
+    text-align: center;
+}
+
+.footer-footer-blok p {
+    color: var(--light-color);
+}
+
+.footer-footer-blok p span {
+    color: var(--blue-color);
+}
+
+@media (max-width: 1366px) {
+        .footer-blok__section-2 {
+            gap: 30px;
+        }
+}
+
+@media (max-width: 1145px) {
+    .footer-blok {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 780px) {
+    .footer-blok {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .footer-blok__section-1 {
+        align-items: center;
+        text-align: center;
+    }
+    .footer-blok__section-2 {
+        justify-content: center;
+    }
+    .footer-blok__section-3 {
+        align-items: center;
+    }
+    .footer-blok__section-3 p {
+        text-align: center;
+    }
+    .footer-footer-blok p {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 349px) {
+    .footer-blok__section-2 {
+        gap: 10px;
+    }
+}
