@@ -1,4 +1,3 @@
-'use client'
 import React from 'react';
 import ContactsComp from './ContactsComp';
 import Title from '../components/title/title';
