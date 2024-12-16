@@ -21,10 +21,12 @@
     font-size: 280%;
     color: var(--blue-color);
     text-transform: uppercase;
+    font-family: "Jost", sans-serif;
 }
 
 .pagename-blok h2 {
     text-align: center;
+    font-family: "Jost", sans-serif;
 }
 
 .pagename-blok__section {
@@ -39,10 +41,15 @@
     text-decoration: none;
     transition: .3s;
     color: #fff;
+    font-family: "Jost", sans-serif;
 }
 
 .pagename-parent:hover {
     color: var(--blue-color);
+}
+
+.pagename-child {
+    font-family: "Jost", sans-serif;
 }
 
 .pagename-icon {

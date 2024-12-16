@@ -1,0 +1,187 @@
+.prices {
+    padding: 20px 10px;
+    background-image: url('/images/about-home-bg.png');
+    background-size: cover;
+}
+
+.prices-h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.prices__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.prices__header p {
+    color: var(--blue-color);
+}
+
+.prices__header__icon {
+    color: var(--blue-color);
+}
+
+.prices-blok {
+    color: var(--blue-color);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.prices-blok__section-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 50px;
+    border: none;
+    border-top: 2px solid var(--blue-color);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.prices-blok__section-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 50px;
+    border-top: 2px solid var(--red-color);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.prices-blok__section-1:hover {
+    border-top: 2px solid var(--red-color);
+}
+
+.prices-blok__section-2:hover {
+    border-top: 2px solid var(--blue-color);
+}
+
+.prices-blok__section-1 h2 {
+    text-align: center;
+    color: #000;
+}
+
+.prices-blok__section-2 h2 {
+    text-align: center;
+    color: #000;
+}
+
+.prices-blok__section-1__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 25px;
+    background-color: #F3F7FB;
+    padding: 10px;
+}
+
+.prices-blok__section-1__header h1 {
+    color: var(--blue-color);
+}
+
+.prices-blok__section-1__header p {
+    font-weight: 400;
+    color: var(--text-color);
+    font-size: 90%;
+}
+
+.prices-blok__section-1__container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.prices-blok__section-1__container-part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.prices-blok__section-1__container-part p {}
+
+.prices-blok__section-1__footer {
+    display: flex;
+    justify-content: center;
+}
+
+.prices-blok__section-1__footer a {
+    transition: .5s;
+    text-decoration: none;
+    width: 200px;
+}
+
+.prices-blok__section-1__footer a button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+    transition: .5s;
+    padding: 15px 0;
+    font-weight: bold;
+    width: 200px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.prices__button-1 {
+    background-color: var(--blue-color);
+}
+
+.prices__button-2 {
+    background-color: var(--red-color);
+}
+
+.prices__button__icon {
+    color: #fff;
+    transition: .5s;
+}
+
+.prices-blok__section-1__footer a button:hover {
+    opacity: .7;
+}
+
+.prices-blok__section-1__footer a:hover .prices__button__icon {
+    transform: translateX(10px);
+}
+
+.prices__open-icon {
+    width: 15px;
+    height: 15px;
+    color: var(--blue-color);
+}
+
+.prices__close-icon {
+    width: 15px;
+    height: 15px;
+    color: var(--red-color);
+}
+
+@media (max-width: 768px) {
+    .prices-blok {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prices-blok__section-1 {
+        padding: 30px 20px;
+        width: 100%;
+    }
+
+    .prices-blok__section-2 {
+        padding: 30px 20px;
+        width: 100%;
+    }
+}

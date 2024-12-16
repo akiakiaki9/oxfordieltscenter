@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 import { FaBook } from "react-icons/fa";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function SectionComp() {
     return (
@@ -9,22 +9,20 @@ export default function SectionComp() {
             <div className="section-blok">
                 <div className="section-blok__header">
                     <FaBook className='section-blok__header__icon' />
-                    <p>Are You Ready For This Offer</p>
+                    <p>Ready to start learning with us?</p>
                 </div>
-                <h1 className='section__h1-1'>40% Offer First <span>100 Student’s</span> For Featured</h1>
+                <h1 className='section__h1-1'>Join Our <span>Courses</span> Faster</h1>
                 <h1 className='section__h1-2'>Topics by Education Category</h1>
-                <p className='section-blok__p'>Get unlimited access to 6,000+ of Udemy’s top courses for your team. Learn and improve skills
-                    across business, tec, design, and more.
-                </p>
+                <p className='section-blok__p'>Access the best Oxford IELTS Center courses for you. Learn and improve your English skills</p>
                 <div className="section-blok__container">
-                    <Link href="/">
+                    <Link href="/contacts">
                         <button className='section-blok__container-button-1'>
-                            JOIN WITH US <FaLongArrowAltRight className='section-blok__container__icon' />
+                            JOIN WITH US <FaArrowRight className='section-blok__container__icon' />
                         </button>
                     </Link>
-                    <Link href="/">
+                    <Link href="/team">
                         <button className='section-blok__container-button-2'>
-                            BECOME A TEACHER <FaLongArrowAltRight className='section-blok__container__icon' />
+                            OUR TEAM <FaArrowRight className='section-blok__container__icon' />
                         </button>
                     </Link>
                 </div>

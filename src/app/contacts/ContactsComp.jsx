@@ -1,54 +1,121 @@
-'use client'
-
-import React from 'react';
-import axios from 'axios';
-import { useState } from 'react'
+'use client';
+import React, { useState } from 'react';
+import YandexComp from '../components/YandexComp';
+import GoogleMaps from '../components/GoogleMaps';
 import { SlLocationPin } from "react-icons/sl";
 import { BsTelephone } from "react-icons/bs";
-import { FaRegClock } from "react-icons/fa";
-import GoogleMaps from '../components/GoogleMaps';
+import { FaRegClock } from "react-icons/fa6";
 
 export default function ContactsComp() {
 
   const [formData, setFormData] = useState({
+    message: '',
     fullname: '',
-    age: '',
     course: '',
     phone: '',
-    email: '',
-    message: ''
+    email: ''
   });
-  const courses = ['IELTS', 'CEFR'];
-  const [error, setError] = useState(null)
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const courses = ['IELTS', 'CEFR'];
+  const [isBlocked, setIsBlocked] = useState(false); // Состояние для блокировки отправки
+  const [blockTimeRemaining, setBlockTimeRemaining] = useState(0); // Оставшееся время блокировки
+
+  const maxSubmissions = 5; // Максимальное количество отправок
+  const timeWindow = 60 * 1000; // Время в миллисекундах (1 минута)
+  const blockDuration = 5 * 60 * 1000; // Время блокировки (5 минут)
+
+  // Получаем массив отправок из localStorage или инициализируем пустым массивом
+  const getRecentSubmissions = () => {
+    const savedSubmissions = localStorage.getItem('submissions');
+    return savedSubmissions ? JSON.parse(savedSubmissions) : [];
+  };
+
+  const saveSubmissions = (submissions) => {
+    localStorage.setItem('submissions', JSON.stringify(submissions));
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Получаем текущие временные метки отправок
+    const currentTime = new Date().getTime();
+    const recentSubmissions = getRecentSubmissions();
+
+    // Фильтруем метки времени отправок, которые произошли в пределах текущей минуты
+    const recentSubmissionsWithinTimeWindow = recentSubmissions.filter(timestamp => currentTime - timestamp <= timeWindow);
+
+    // Если отправлено больше 5 сообщений за последнюю минуту, блокируем форму на 5 минут
+    if (recentSubmissionsWithinTimeWindow.length >= maxSubmissions) {
+      setIsBlocked(true);
+      setBlockTimeRemaining(blockDuration);
+      return;
+    }
+
+    // Добавляем текущую метку времени отправки
+    const updatedSubmissions = [...recentSubmissions, currentTime].slice(-10); // Храним только последние 10 отправок
+    saveSubmissions(updatedSubmissions);
+
     try {
-      const response = await axios.post('http://127.0.0.1:8000/contacts-form', { ...formData });
-      alert('Thank you for contacting us, we will definitely contact you.');
-    } catch (error) {
-      console.error('Error:', error.response?.data || error.message)
-      alert('Error Registration')
+      const response = await fetch("https://formspree.io/f/mpwaljag", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        alert('Thanks for your request.!');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          tel: '',
+          age: '',
+          gender: '',
+          examType: '',
+          body: ''
+        });
+      } else {
+        alert('Error submitting form.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Error submitting form.');
     }
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  // Таймер для отсчета времени блокировки
+  React.useEffect(() => {
+    if (isBlocked && blockTimeRemaining > 0) {
+      const timer = setInterval(() => {
+        setBlockTimeRemaining(prev => prev - 1000);
+      }, 1000);
+
+      return () => clearInterval(timer);
+    }
+
+    if (blockTimeRemaining <= 0) {
+      setIsBlocked(false);
+    }
+  }, [isBlocked, blockTimeRemaining]);
 
   return (
     <>
-      <div className="map">
-        <GoogleMaps />
-      </div>
       <div className="contacts">
         <div className="contacts-blok">
           <div className="contacts-blok__section-1">
             <div className="contacts-blok__section-1__header">
               <h1>Have Any Questions?</h1>
               <div className="contacts-blok__section-1__header__line"></div>
-              <p>Have a inquiry or some feedback for us? Fill out the form below to contact our team.</p>
+              <p>Have some feedback for us? Fill out the form below to contact our team.</p>
             </div>
             <div className="contacts-blok__section-1-part">
               <div className="contacts-blok__section-1-part-icon">
@@ -67,7 +134,6 @@ export default function ContactsComp() {
               <div className="contacts-blok__section-1-part__container">
                 <h3>Phone Number</h3>
                 <p><a href="tel:+998770047766">+998 77 004-77-66</a></p>
-                <p><a href="tel:+998912469665">+998 91 246-96-65</a></p>
               </div>
             </div>
             <div className="contacts-blok__section-1-part">
@@ -90,18 +156,18 @@ export default function ContactsComp() {
             </div>
             <form onSubmit={handleSubmit} className='contacts-form'>
               <div className="contacts-form__section">
-                <textarea placeholder='Message' name='message' id='message' required value={formData.message} onChange={handleChange}>
+                <textarea placeholder='Message' name='message' id='message' required value={formData.message} onChange={handleInputChange}>
                 </textarea>
               </div>
               <div className="contacts-form__section">
-                <input placeholder='Your Full Name' name="fullname" required type="text" value={formData.fullname} onChange={handleChange} />
+                <input placeholder='Full Name' name="fullname" required type="text" value={formData.fullname} onChange={handleInputChange} />
                 <input placeholder='Your Age' name="age" required type="number" />
               </div>
               <div className="contacts-form__section">
                 <select
                   name="course"
                   value={formData.course}
-                  onChange={handleChange}
+                  onChange={handleInputChange}
                   required
                 >
                   <option value="" disabled>Select Course Type</option>
@@ -109,16 +175,22 @@ export default function ContactsComp() {
                     <option key={index} value={course}>{course}</option>
                   ))}
                 </select>
-                <input placeholder='Your Phone Number' name="phone" required type="text" value={formData.phone} onChange={handleChange} />
+                <input placeholder='Phone Number' name="phone" required type="text" value={formData.phone} onChange={handleInputChange} />
               </div>
               <div className="contacts-form__section">
-                <input placeholder='Your Email' name="email" required type="text" value={formData.email} onChange={handleChange} />
+                <input placeholder='Your Email' name="email" required type="text" value={formData.email} onChange={handleInputChange} />
                 <button type='submit'>Submit</button>
               </div>
             </form>
           </div>
         </div>
       </div >
+      <div className="contacts-yandex">
+        <YandexComp />
+      </div>
+      <div className="map">
+        <GoogleMaps />
+      </div>
     </>
-  )
+  );
 };

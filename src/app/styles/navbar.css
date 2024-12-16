@@ -19,8 +19,8 @@
 }
 
 .navbar-brand {
-    width: 80px;
-    height: 35px;
+    width: 65px;
+    height: 40px;
 }
 
 .brand h1 {
@@ -40,11 +40,13 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    font-family: "Jost", sans-serif;
 }
 
 .menu-links.active {
     display: flex;
     flex-direction: column;
+    font-family: "Jost", sans-serif;
 }
 
 .menu-links a {
@@ -54,10 +56,11 @@
     text-align: center;
     transition: color 0.3s ease-in-out;
     text-decoration: none;
+    font-family: "Jost", sans-serif;
 }
 
 .menu-links a:hover {
-    color: var(--main-color);
+    color: #5591ff;
 }
 
 .close-icon {
@@ -69,15 +72,16 @@
 }
 
 .book-button {
-    padding: 10px 20px;
-    background-color: var(--dark-color);
-    border: 1px solid var(--main-color);
+    padding: 5px 25px;
+    background-color: var(--blue-color);
+    border: 2px solid var(--blue-color);
     color: #fff;
     border-radius: 8px;
     cursor: pointer;
     text-transform: uppercase;
     transition: .5s;
-    font-size: 105%;
+    font-size: 100%;
+    font-family: "Jost", sans-serif;
 }
 
 .book-button:hover {

@@ -3,22 +3,25 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-image: url('/images/header-bg.jpg');
+    justify-content: start;
+    background-image: url('/images/header.bg.jpg');
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
-    background-color: #0000005a;
+    background-color: #0000009f;
 }
 
 .header-blok {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     text-align: center;
     color: #fff;
-    padding: 10px;
+    padding: 100px;
 }
 
 .header__h1-1 {
-    font-size: 280%;
+    font-size: 230%;
     margin-bottom: 20px;
     font-weight: 400;
 }
@@ -34,24 +37,49 @@
     margin-bottom: 30px;
 }
 
-.header-blok button {
+.header-blok a {
+    text-decoration: none;
+    width: 200px;
+}
+
+.header__button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    padding: 15px 20px;
-    font-weight: bold;
-    font-size: 115%;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--blue-color);
+    gap: 10px;
     color: #fff;
+    border: none;
+    padding: 20px 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 200px;
+    font-size: 102%;
     cursor: pointer;
+    transition: .5s;
+    text-decoration: none;
+    background-color: var(--blue-color);
+}
+
+.header-blok a:hover .header__button {
+    background-color: var(--red-color);
+}
+
+.header__icon {
     transition: .5s;
 }
 
-.header-blok button:hover {
-    opacity: .7;
+.header-blok a:hover .header__icon {
+    transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+    .header {
+        justify-content: center;
+    }
+    .header-blok {
+        padding: 10px;
+        align-items: center;
+    }
 }
 
 @media (max-width: 667px) {
@@ -61,5 +89,15 @@
     
     .header__h1-2 {
         font-size: 300%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.221), rgba(0, 0, 0, 0.178)), url('/images/header.bg.jpg');
+        background-position: center;
+        background-size: contain;
+        background-attachment: local;
+        background-size: cover;
     }
 }

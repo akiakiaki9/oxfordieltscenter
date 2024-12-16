@@ -1,0 +1,78 @@
+.yandexhome {
+    background-image: url('/images/yandex-bg.jpg');
+    background-blend-mode: multiply;
+    background-color: #0000006f;
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.yandexhome-blok {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+}
+
+.yandexhome-blok h1 {
+    color: #fff;
+    font-size: 300%;
+    margin-bottom: 5px;
+}
+
+.yandexhome-blok p {
+    color: #fff;
+    font-size: 105%;
+    margin-bottom: 30px;
+}
+
+.yandexhome-blok a {
+    text-decoration: none;
+    width: 200px;
+}
+
+.yandexhome-blok a button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    border: none;
+    padding: 15px 5px;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 150px;
+    font-size: 102%;
+    cursor: pointer;
+    transition: .5s;
+    text-decoration: none;
+    background-color: yellow;
+}
+
+.yandexhome__icon {
+    color: #000;
+    transition: .5s;
+}
+
+.yandexhome-blok a button:hover {
+    opacity: .7;
+}
+
+.yandexhome-blok a button:hover .yandexhome__icon {
+    transform: translateX(10px);
+}
+
+@media (max-width: 600px) {
+    .yandexhome {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.02)), url('/images/yandex-bg.jpg');
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .yandexhome-blok {
+        padding-left: 0;
+        padding: 10px;
+    }
+}

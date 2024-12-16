@@ -37,28 +37,20 @@ export default function Navbar() {
                 <div className="close-icon" onClick={toggleMenu}>
                     <FaTimes />
                 </div>
-                <Link href="/" onClick={() => handleLinkClick('/')} style={{ color: activePage === '/' ? 'var(--main-color)' : '' }}>
+                <Link href="/" onClick={() => handleLinkClick('/')} style={{ color: activePage === '/' ? 'var(--blue-color)' : '' }}>
                     Home
                 </Link>
-                <Link href="/menu" onClick={() => handleLinkClick('/team')} style={{ color: activePage === '/menu' ? 'var(--main-color)' : '' }}>
+                <Link href="/team" onClick={() => handleLinkClick('/team')} style={{ color: activePage === '/team' ? 'var(--blue-color)' : '' }}>
                     Team
                 </Link>
-                <Link href="/about-us" onClick={() => handleLinkClick('/about-us')} style={{ color: activePage === '/about-us' ? 'var(--main-color)' : '' }}>
+                <Link href="/about-us" onClick={() => handleLinkClick('/about-us')} style={{ color: activePage === '/about-us' ? 'var(--blue-color)' : '' }}>
                     About Us
                 </Link>
-                <Link href="/contacts" onClick={() => handleLinkClick('/contacts')} style={{ color: activePage === '/contacts' ? 'var(--main-color)' : '' }}>
+                <Link href="/contacts" onClick={() => handleLinkClick('/contacts')} style={{ color: activePage === '/contacts' ? 'var(--blue-color)' : '' }}>
                     Contacts
                 </Link>
-                <Link href="/news" onClick={() => handleLinkClick('/news')} style={{ color: activePage === '/news' ? 'var(--main-color)' : '' }}>
-                    News
-                </Link>
-                <Link href="/auth/login">
-                    <button className="book-button" onClick={() => handleLinkClick('/auth/login')}
-                        style={{ backgroundColor: activePage === '/auth/login' ? 'var(--main-color)' : '', color: activePage === '/auth/login' ? '#fff' : '' }}
-                    >
-                        Log In
-                    </button>
-                </Link>
+                <div>
+                </div>
             </div>
             {isOpen && <div className="overlay" onClick={toggleMenu} />}
         </nav>

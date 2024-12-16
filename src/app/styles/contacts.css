@@ -1,5 +1,5 @@
 .map {
-    padding: 50px;
+    padding: 30px;
     border: none;
 }
 
@@ -8,7 +8,7 @@
 }
 
 .contacts {
-    padding: 0 10px 50px 10px;
+    padding: 30px 10px 50px 10px;
 }
 
 .contacts-blok {
@@ -28,7 +28,9 @@
     flex-direction: column;
 }
 
-.contacts-blok__section-1__header h1 {}
+.contacts-blok__section-1__header h1 {
+    font-family: "Jost", sans-serif;
+}
 
 .contacts-blok__section-1__header p {
     font-size: 105%;
@@ -116,6 +118,7 @@
 
 .contacts-blok__section-2__header h1 {
     font-size: 280%;
+    font-family: "Jost", sans-serif;
 }
 
 .contacts-blok__section-2__header-p1 {

@@ -1,0 +1,278 @@
+.team {
+    padding: 10px 10px 30px 10px;
+    background-image: url('/images/about-home-bg.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.team-header {
+    display: flex;
+    justify-content: center;
+}
+
+.team-header-blok {
+    width: 400px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+}
+
+.team-header-blok__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: .5s;
+}
+
+.team-header-blok__section p {
+    font-family: "Jost", sans-serif;
+    font-weight: bold;
+    font-size: 102%;
+}
+
+.team-header-blok__icon {
+    color: var(--blue-color);
+    width: 20px;
+    height: 20px;
+}
+
+.team-header-blok__section input {
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 102%;
+}
+
+.team-header-blok__section input:focus {
+    border: 1px solid var(--blue-color);
+    outline-color: var(--blue-color);
+}
+
+.team-blok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.team-blok__section {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.team-blok__section-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-blok__section-img img {
+    transition: 0.5s;
+    border-radius: 15px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.team-blok__section:hover .team-blok__section-img img {
+    transform: scale(1.1);
+}
+
+/* Стили для социальных иконок */
+.team-blok__section-img .team-blok__social-icons {
+    position: absolute;
+    top: 25%;
+    left: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    /* Скрываем иконки по умолчанию */
+    transform: translateY(-20px);
+    /* Смещение вверх */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.team-blok__social-icons-2 {
+    display: none;
+}
+
+.team-blok__section-img:hover .team-blok__social-icons {
+    opacity: 1;
+    /* Появление */
+    transform: translateY(0);
+    /* Возвращаем на место */
+}
+
+.team-blok__social-icons__icon {
+    width: 30px;
+    height: 30px;
+    color: var(--blue-color);
+}
+
+.team-blok__section-img .team-blok__social-icons .icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--blue-color);
+    /* Основной цвет */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.team-blok__section-img .team-blok__social-icons .icon.telegram {
+    background-color: #fff;
+    animation: appear 0.3s ease forwards 0.1s;
+}
+
+.team-blok__section-img .team-blok__social-icons .icon.instagram {
+    background-color: #fff;
+    animation: appear 0.3s ease forwards 0.2s;
+}
+
+.team-blok__section-img .team-blok__social-icons .icon:hover {
+    transform: scale(1.1);
+}
+
+/* Анимация последовательного появления */
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team-blok__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.team-blok__header {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.team-blok__header h2 {
+    transition: 0.5s;
+    margin-bottom: 7px;
+}
+
+.team-blok__header h1:hover {
+    color: var(--blue-color);
+}
+
+.team-blok__header p {
+    color: var(--blue-color);
+    font-size: 95%;
+}
+
+.team-blok__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.team-blok__footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.team-blok__footer-section__drop {
+    width: 2px;
+    height: 15px;
+    border-radius: 5px;
+    background-color: #00000053;
+}
+
+.team-blok__footer__icon {
+    color: var(--blue-color);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+
+    .team-blok {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-blok__section {
+        width: 70%;
+    }
+
+    .team-blok__container {
+        align-items: center;
+    }
+
+    .team-blok__section-img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .team-blok__header {
+        text-align: center;
+    }
+
+    .team-blok__social-icons {
+        display: none;
+    }
+
+    .team-blok__social-icons-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .team-blok__section-img .team-blok__social-icons .icon.telegram {
+        display: none;
+    }
+    
+    .team-blok__section-img .team-blok__social-icons .icon.instagram {
+        display: none;
+    }
+    
+    .team-blok__section-img .team-blok__social-icons .icon:hover {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-blok__section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .team-header-blok {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .team-header-blok__section input {
+        width: 220px;
+    }
+}

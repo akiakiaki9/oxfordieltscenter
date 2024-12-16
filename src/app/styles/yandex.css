@@ -1,0 +1,43 @@
+.yandexgo {
+    margin-top: 30px;
+}
+
+.contacts-yandex {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yandexgo-blok {
+    padding: 8px;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    background-color: yellow;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.yandexgo-blok:hover {
+    opacity: .7;
+}
+
+.yandexgo-blok__section {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.yandexgo-blok__section img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.yandexgo-blok p {
+    font-size: 80%;
+    color: #000;
+    font-weight: bold;
+}

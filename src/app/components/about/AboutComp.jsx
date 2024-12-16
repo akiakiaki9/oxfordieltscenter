@@ -16,9 +16,7 @@ export default function AboutComp() {
                         <p>MORE ABOUT OUR COMPANY</p>
                     </div>
                     <h1>Learn About Oxford IELTS Center</h1>
-                    <p className='about-blok__section-2-p1'>Synergistically visualize alternative content before cross functional core Rapidiously administra
-                        standardized value via focused benefits. Rapidiously redefine highly efficient niche markets with
-                        plug-and-play materials professionally seize client centric solutions
+                    <p className='about-blok__section-2-p1'>Effectively tailor learning materials to students’ needs to achieve high results in IELTS and CEFR exams. Rapidly implement standardised teaching methods, delivering maximum value to students. Focus on individual learners’ needs with flexible and innovative learning solutions.
                     </p>
                     <div className="about-blok__section-2__container">
                         <div className="about-blok__section-2__container-part">
@@ -35,7 +33,8 @@ export default function AboutComp() {
                         <Link href="/about-us">
                             <button className='about-blok__section-2__button about-blok__section-2__button-1'>
                                 LEARN MORE <FaArrowRight className='about-blok__section-2__buttons__icon' />
-                            </button></Link>
+                            </button>
+                        </Link>
                         <Link href="/contacts">
                             <button className='about-blok__section-2__button about-blok__section-2__button-2'>
                                 CONTACTS US <FaArrowRight className='about-blok__section-2__buttons__icon' />
