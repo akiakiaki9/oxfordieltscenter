@@ -1,29 +1,35 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function YandexComp() {
     const latitude = 39.763836; // Ваши координаты
     const longitude = 64.430279;
 
+    // Состояние для определения типа устройства
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        // Проверяем, доступен ли navigator
+        if (typeof navigator !== 'undefined') {
+            setIsMobile(/android|webOS|iPhone|iPad|iPod|blackberry|iemobile|opera mini/i.test(navigator.userAgent));
+        }
+    }, []);
+
     const handleClickMobile = () => {
-        // URL для вызова приложения Яндекс Карты
         const yandexMapsUrl = `yandexmaps://maps.yandex.ru/?pt=${longitude},${latitude}&z=16&l=map`;
 
-        if (/android/i.test(navigator.userAgent)) {
-            // Android: Используем intent для вызова Яндекс Карт
+        if (typeof navigator !== 'undefined' && /android/i.test(navigator.userAgent)) {
             const androidIntentUrl = `intent://maps.yandex.ru/?pt=${longitude},${latitude}&z=16&l=map#Intent;scheme=yandexmaps;package=ru.yandex.yandexmaps;end`;
             window.location.href = androidIntentUrl;
-        } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-            // iOS: Пробуем открыть приложение, если не сработает, переходим в App Store
+        } else if (typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent)) {
             setTimeout(() => {
-                window.location.href = `https://apps.apple.com/ru/app/id313877526`; // Ссылка на Яндекс Карты в App Store
+                window.location.href = `https://apps.apple.com/ru/app/id313877526`;
             }, 1000);
             window.location.href = yandexMapsUrl;
         }
     };
 
     const handleClickDesktop = () => {
-        // URL для открытия Яндекс Карт в браузере
         const yandexMapsUrl = `https://yandex.ru/maps/?pt=${longitude},${latitude}&z=16&l=map`;
         window.open(yandexMapsUrl, '_blank');
     };
@@ -31,7 +37,7 @@ export default function YandexComp() {
     return (
         <div className="yandexgo" id='yandex'>
             <div className="yandexgo-blok">
-                {(/android|webOS|iPhone|iPad|iPod|blackberry|iemobile|opera mini/i.test(navigator.userAgent)) ? (
+                {isMobile ? (
                     <div onClick={handleClickMobile} className="yandexgo-blok__section">
                         <img src="/images/yandexgo.png" alt="Яндекс Карты" />
                         <p>Открыть в приложении Яндекс Карты</p>
