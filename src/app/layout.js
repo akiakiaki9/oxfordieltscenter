@@ -46,10 +46,25 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <link rel="icon" href="/images/oxfordlogo.png" />
+        <link rel="icon" href="/images/oxfordlogo.png" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-64GLC3TRJW"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive">
+          {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-64GLC3TRJW');
+  `}
+        </Script>
+
       </head>
       <body>
-          {children}
+        {children}
       </body>
     </html>
   );
