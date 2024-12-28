@@ -19,6 +19,7 @@ import './styles/coursesdet.css'
 import './styles/noresult.css'
 import './styles/yandex.css'
 import './styles/yandexhome.css'
+import './styles/modal.css'
 
 import Script from 'next/script'
 
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="yandex-verification" content="66b3de2d4c1f17d3" />
         <link rel="icon" href="/images/oxfordlogo.png" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-64GLC3TRJW"
