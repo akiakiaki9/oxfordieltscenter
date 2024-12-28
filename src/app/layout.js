@@ -48,6 +48,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="yandex-verification" content="66b3de2d4c1f17d3" />
+        <meta name="msvalidate.01" content="9727FEB9B9A0FBF3F14C214D959E9BB5" />
         <link rel="icon" href="/images/oxfordlogo.png" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-64GLC3TRJW"
