@@ -1,61 +1,70 @@
-'use client';
-import React, { useState } from 'react';
-import YandexComp from '../components/YandexComp';
-import GoogleMaps from '../components/GoogleMaps';
+'use client'
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { SlLocationPin } from "react-icons/sl";
 import { BsTelephone } from "react-icons/bs";
-import { FaRegClock } from "react-icons/fa6";
+import { FaRegClock } from "react-icons/fa";
+import GoogleMaps from '../components/GoogleMaps';
+import YandexComp from '../components/YandexComp';
 
 export default function ContactsComp() {
-
   const [formData, setFormData] = useState({
-    message: '',
     fullname: '',
+    age: '',
     course: '',
-    phone: '',
-    email: ''
+    phone: '+998', // Начальное значение для номера телефона
+    email: '',
+    message: ''
   });
+  const [courses, setCourses] = useState([]);
+  const [error, setError] = useState(null);
 
-  const courses = ['IELTS', 'CEFR'];
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const response = await axios.get('https://oxfordstudycenter-production.up.railway.app/api/courses/');
+        setCourses(response.data);
+      } catch (error) {
+        console.error('Error fetching courses:', error.message);
+        setError('Failed to load courses');
+      }
+    };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    fetchCourses();
+  }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('https://oxfordstudycenter-production.up.railway.app/api/contact-form/', {
+        fullname: formData.fullname,
+        age: formData.age,
+        course: formData.course, // Отправляем id курса
+        phone_number: formData.phone,
+        email: formData.email,
+        message: formData.message
+      });
+      alert('Thank you for contacting us!');
+    } catch (error) {
+      console.error('Error:', error.response?.data || error.message);
+      setError(error.message);
+    }
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-    try {
-      const response = await fetch("https://formspree.io/f/mpwaljag", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-      });
+    if (name === "phone") {
+      const formattedValue = value.startsWith('+998')
+        ? '+998' + value.slice(4).replace(/\D/g, '')
+        : '+998';
 
-      if (response.ok) {
-        alert('Thanks for your request.!');
-        setFormData({
-          firstName: '',
-          lastName: '',
-          tel: '',
-          age: '',
-          gender: '',
-          examType: '',
-          body: ''
-        });
-      } else {
-        alert('Error submitting form.');
-      }
-    } catch (err) {
-      console.error(err);
-      alert('Error submitting form.');
+      setFormData({ ...formData, phone: formattedValue });
+      return;
     }
+
+    setFormData({ ...formData, [name]: value });
   };
 
   return (
@@ -66,7 +75,7 @@ export default function ContactsComp() {
             <div className="contacts-blok__section-1__header">
               <h1>Have Any Questions?</h1>
               <div className="contacts-blok__section-1__header__line"></div>
-              <p>Have some feedback for us? Fill out the form below to contact our team.</p>
+              <p>Have a inquiry or some feedback for us? Fill out the form below to contact our team.</p>
             </div>
             <div className="contacts-blok__section-1-part">
               <div className="contacts-blok__section-1-part-icon">
@@ -98,6 +107,7 @@ export default function ContactsComp() {
               </div>
             </div>
           </div>
+          {/* Форма */}
           <div className="contacts-blok__section-2">
             <div className="contacts-blok__section-2__header">
               <p className='contacts-blok__section-2__header-p1'>CONTACTS WITH US!</p>
@@ -107,35 +117,48 @@ export default function ContactsComp() {
             </div>
             <form onSubmit={handleSubmit} className='contacts-form'>
               <div className="contacts-form__section">
-                <textarea placeholder='Message' name='message' id='message' required value={formData.message} onChange={handleInputChange}>
-                </textarea>
+                <textarea placeholder='Message' name='message' id='message' required value={formData.message} onChange={handleChange}></textarea>
               </div>
               <div className="contacts-form__section">
-                <input placeholder='Full Name' name="fullname" required type="text" value={formData.fullname} onChange={handleInputChange} />
-                <input placeholder='Your Age' name="age" required type="number" />
+                <input placeholder='Your Full Name' name="fullname" required type="text" value={formData.fullname} onChange={handleChange} />
+                <input placeholder='Your Age' name="age" required type="number" value={formData.age} onChange={handleChange} />
               </div>
               <div className="contacts-form__section">
                 <select
                   name="course"
                   value={formData.course}
-                  onChange={handleInputChange}
+                  onChange={handleChange}
                   required
                 >
                   <option value="" disabled>Select Course Type</option>
-                  {courses.map((course, index) => (
-                    <option key={index} value={course}>{course}</option>
+                  {courses.map((course) => (
+                    <option key={course.id} value={course.id}>{course.name}</option>
                   ))}
                 </select>
-                <input placeholder='Phone Number' name="phone" required type="text" value={formData.phone} onChange={handleInputChange} />
+                <input
+                  placeholder="Your Phone Number"
+                  name="phone"
+                  required
+                  type="text"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  maxLength={13} // Учитываем длину номера с +998
+                  onFocus={(e) => {
+                    if (!formData.phone) {
+                      setFormData({ ...formData, phone: '+998' });
+                    }
+                  }}
+                />
               </div>
               <div className="contacts-form__section">
-                <input placeholder='Your Email' name="email" required type="text" value={formData.email} onChange={handleInputChange} />
+                <input placeholder='Your Email' name="email" required type="text" value={formData.email} onChange={handleChange} />
                 <button type='submit'>Submit</button>
               </div>
+              {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
             </form>
           </div>
         </div>
-      </div >
+      </div>
       <div className="contacts-yandex">
         <YandexComp />
       </div>

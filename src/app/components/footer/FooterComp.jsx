@@ -16,7 +16,7 @@ export default function FooterComp() {
             <div className="footer-blok">
                 <div className="footer-blok__section-1">
                     <Link href="/"><img src="/images/oxfordlogo.png" alt="Oxford IELTS Center Logo" /></Link>
-                    {/* <p>We continually improve our educational programs so that communities can find inspiring and rewarding paths to personal and professional growth.</p> */}
+                    <p>We continually improve our educational programs so that communities can find inspiring and rewarding paths to personal and professional growth.</p>
                     <h2>FOLLOW US ON:</h2>
                     <div className="footer-blok__section-1__container">
                         <a href="https://t.me/oxford_bukhara"><FaTelegramPlane className='footer-blok__section-1__container__icon' /></a>
@@ -32,6 +32,7 @@ export default function FooterComp() {
                         <Link href='/team'><GoDotFill className='footer-blok__section-2__icon' /><p>Our Team</p></Link>
                         <a href="#prices"><GoDotFill className='footer-blok__section-2__icon' /><p>Prices</p></a>
                         <Link href='/contacts'><GoDotFill className='footer-blok__section-2__icon' /><p>Send a message</p></Link>
+                        <a href="https://akbarsoft.uz/" target='_blank'><GoDotFill className='footer-blok__section-2__icon' /><p>Developer</p></a>
                     </div>
                     <div className="footer-blok__section-2-part">
                         <h2>Resources</h2>

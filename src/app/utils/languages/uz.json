@@ -1,0 +1,165 @@
+{ 
+    "navbar": {
+        "navbar-item-1": "Asosiy",
+        "navbar-item-2": "Jamoa",
+        "navbar-item-3": "Biz",
+        "navbar-item-4": "Kontkatlar",
+        "navbar-item-5": "Kurslar",
+        "navbar-item-6": "Kirish"
+    },
+    "header": {
+        "header1": "Bilim olish kuchini oching",
+        "header2": "Uchrashuvlar davom etmoqda, hoziroq ro'yxatdan o'ting",
+        "header3": "Kirish"
+    },
+    "about": {
+        "about-1": "KOMPANYAMIZ HAQIDA BATAFSIL",
+        "about-2": "Oxford IELTS CEnter haqida ko'proq",
+        "about-3": "IELTS va CEFR imtihonlarida yuqori natijalarga erishish uchun o‘quv materiallarini o‘quvchilaringiz ehtiyojlariga samarali tarzda moslashtiring. Talabalarga maksimal qiymat berish uchun standartlashtirilgan o'qitish usullarini tezda joriy qiling. Moslashuvchan va innovatsion ta'lim yechimlari bilan talabalarning individual ehtiyojlarini qondirish.",
+        "about-4": "Qulay narxlar",
+        "about-5": "Innovatsiyalar va ta'lim kelajagini birgalikda yaratish bo'yicha bizning izlanishimizga qo'shiling",
+        "about-6": "Batafsil ma'lumot",
+        "about-7": "Bog'lanish"
+    },
+    "services": {
+        "services-1": "Moslashuvchan o'rganish",
+        "services-2": "Karyera yo'llari va sohalarini, shuningdek, kerakli ko'nikmalar va ta'limni kashf eting.",
+        "services-3": "O'rganilganmi isboti",
+        "services-4": "Bir qator o'qitish strategiyalari va dars rejalariga kirish"
+    },
+    "section": {
+        "section-1": "Biz bilan o'rganishni boshlashga tayyormisiz?",
+        "section-2": "Kurslarimizga tezroq qo'shiling. Ta'lim toifalari mavzulari",
+        "section-3": "Siz uchun Oxford IELTS Centerning eng yaxshi kurslari. Ingliz tilini yaxshilang",
+        "section-4": "Qo'shiling",
+        "section-5": "Bizning Jamoa"
+    },
+    "prices": {
+        "prices-1": "NARX JADVAL",
+        "prices-2": "Bizning tarif rejamiz",
+        "prices-3": "Tarifni tanlang",
+        "prices-4": "Amaliy testlar",
+        "prices-5": "Asosiy materiallar",
+        "prices-6": "Shaxsiy sessiyalar"
+    },
+    "aboutus3": {
+        "aboutus3-1": "Muvaffaqiyatli o'qitilgan",
+        "aboutus3-2": "Darslar yakunlandi",
+        "aboutus3-3": "Mamnunlik darajasi",
+        "aboutus3-4": "Talabalar jamiyati"
+    },
+    "testimonials": {
+        "testimonials-1": "O'QUVCHILARIMIZ SHARHLARI",
+        "testimonials-2": "Studentlar biz haqida!"
+    },
+    "footer": {
+        "footer-1": "Jamiyatlar shaxsiy va professional o'sish uchun ilhomlantiruvchi va foydali yo'llarni topishlari uchun biz ta'lim dasturlarimizni doimiy ravishda takomillashtirib boramiz.",
+        "footer-2": "BIZGA OBUNA BO'LING",
+        "footer-3": "Tez havolalar",
+        "footer-4": "Bizning jamoa",
+        "footer-5": "Narxlar",
+        "footer-6": "Xabar yubormoq",
+        "footer-7": "Resurslar",
+        "footer-8": "Lokatsiya",
+        "footer-9": "Taksi chaqiring",
+        "footer-10": "Ulanish",
+        "footer-11": "Biz bilan bog'lanish!",
+        "footer-12": "Biz zamonaviy ta'lim standartlariga moslashtirilgan turli xil dasturlarni taklif etamiz.",
+        "footer-13": "Mualliflik huquqi © 2024 Oxford IELTS Center. Barcha huquqlar himoyalangan."
+    },
+    "team": {
+        "team-1": "Hamkasblar"
+    },
+    "aboutus": {
+        "aboutus-1": "BIZ NIMA QILAMIZ",
+        "aboutus-2": "Sizga moslashtirilgan oflayn ta'lim",
+        "aboutus-3": "Sinfda o'rganing",
+        "aboutus-4": "Kichik guruhlardagi qulay darslar o'rganish va o'zaro ta'sir qilish uchun ideal muhit yaratadi",
+        "aboutus-5": "Tajribali murabbiy",
+        "aboutus-6": "Tajribali o'qituvchilar sizni bilim va ishonchning yuqori darajasiga olib chiqishga yordam beradi",
+        "aboutus-7": "Onlayn yordam",
+        "aboutus-8": "Biz har doim sizning savollaringizga javob berishga va o'quv jarayonida sizni qo'llab-quvvatlashga tayyormiz",
+        "aboutus-9": "MARKAZIMIZ HAQIDA",
+        "aboutus-10": "Oxford IELTS CEnterga xush kelibsiz",
+        "aboutus-11": "Talabalarga yo'naltirilgan yondashuvlar orqali individual ta'lim strategiyalarini hamkorlikda optimallashtirish, o'quvchilarga muvaffaqiyatga erishish uchun samarali imkoniyatlar yaratish. Innovatsion, resurs talab qiladigan ta'lim usullari orqali ko'nikmalarni rivojlantirish va global imkoniyatlarga tayyor bo'lishga yordam bering.",
+        "aboutus-12": "Amaliy ta'lim",
+        "aboutus-13": "Moslashuvchan kurslar bilan",
+        "aboutus-14": "Ilg'or ta'lim",
+        "aboutus-15": "Moslashuvchan oflayn ta'lim",
+        "aboutus-16": "Bizning eng yaxshi kurslarimizga kiring",
+        "aboutus-17": "Hozirgi kunda mashhur o'qitish usullari",
+        "aboutus-18": "Sizga mos keladigan o'qituvchini toping",
+        "aboutus-19": "Ro'yxatdan o'tish",
+        "aboutus-20": "IELTS kurslari",
+        "aboutus-21": "Bizning kurslarimiz bilan o'rganing, rivojlaning, muvaffaqiyatga erishing",
+        "aboutus-22": "Bizga qo'shiling",
+        "aboutus-23": "CEFR kurslari",
+        "aboutus-24": "Eng yaxshi kurslarni oling va malakangizni oshiring"
+    },
+    "contacts": {
+        "contacts-1": "Savollaringiz bormi?",
+        "contacts-2": "Sharh qoldirmoqchimisiz? Bizning jamoamiz bilan bog'lanish uchun quyidagi shaklni to'ldiring.",
+        "contacts-3": "Bizning Manzil",
+        "contacts-4": "Telefon raqami",
+        "contacts-5": "Ish vaqti",
+        "contacts-6": "BIZ BILAN BOG'LANISH!",
+        "contacts-7": "Biz bilan bog'lanish",
+        "contacts-8": "Kurslarga yozilmoqchi bo'lsangiz, barcha maydonlarni to'ldiring",
+        "contacts-9": "Xabar",
+        "contacts-10": "To'liq ism",
+        "contacts-11": "Yosh",
+        "contacts-12": "Kurs turini tanlang",
+        "contacts-13": "Telefon raqami",
+        "contacts-14": "Yuborish"
+    },
+    "courses": {
+        "courses-1": "Kurslar",
+        "courses-2": "Baholar",
+        "courses-3": "Sharhlar",
+        "courses-4": "Tomoshalar"
+    },
+    "detail": {
+        "detail-1": "Baholar",
+        "detail-2": "Sharhlar",
+        "detail-3": "Tomoshalar",
+        "detail-4": "Reyting",
+        "detail-5": "Javob",
+        "detail-6": "Kursni baholang",
+        "detail-7": "Yuborish"
+    },
+    "login": {
+        "login-1": "Avtorizatsiya",
+        "login-2": "Iltimos, login maʼlumotlaringizni kiriting",
+        "login-3": "Parol",
+        "login-4": "Yuborish",
+        "login-5": "Hali ro'yxatdan o'tmaganmisiz?",
+        "login-6": "Roʻyxatdan oʻtish"
+    },
+    "signup": {
+        "signup-1": "Registration",
+        "signup-2": "Enter Your Email",
+        "signup-3": "Enter your email to confirm",
+        "signup-4": "Send Confirmation Code",
+        "signup-5": "Already have an account?",
+        "signup-6": "Login",
+        "signup-7": "Enter Confirmation Code",
+        "signup-8": "Confirmation code has been sent to your email",
+        "signup-9": "Confirmation Code",
+        "signup-10": "Verify Code",
+        "signup-11": "Fill in all fields to register",
+        "signup-12": "Full Name",
+        "signup-13": "Password",
+        "signup-14": "Confirm Password",
+        "signup-15": "Submit"
+    },
+    "forgot": {
+        "forgot-1": "Parolni tiklash",
+        "forgot-2": "Parolni tiklash uchun pochtangizni kiriting",
+        "forgot-3": "Tasdiqlash kodini kiriting",
+        "forgot-4": "Tasdiqlash kodi pochtangizga yuborildi",
+        "forgot-5": "Yangi parolingizni kiriting",
+        "forgot-6": "Yangi parol",
+        "forgot-7": "Parolni unutdingizmi?",
+        "forgot-8": "Tiklash"
+    }
+}

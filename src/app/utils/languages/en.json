@@ -1,0 +1,165 @@
+{ 
+    "navbar": {
+        "navbar-item-1": "Home",
+        "navbar-item-2": "Team",
+        "navbar-item-3": "About Us",
+        "navbar-item-4": "Contacts",
+        "navbar-item-5": "Courses",
+        "navbar-item-6": "Log In"
+    },
+    "header": {
+        "header1": "Unlock The Power Of Learning",
+        "header2": "Admission going on, hurry to enroll now",
+        "header3": "ADMISSION NOW"
+    },
+    "about": {
+        "about-1": "MORE ABOUT OUR COMPANY",
+        "about-2": "Learn About Oxford IELTS Center",
+        "about-3": "Effectively tailor learning materials to students’ needs to achieve high results in IELTS and CEFR exams. Rapidly implement standardised teaching methods, delivering maximum value to students. Focus on individual learners’ needs with flexible and innovative learning solutions.",
+        "about-4": "Competitive Rates",
+        "about-5": "Join us on our journey as we continue to innovate & shape the future of education.",
+        "about-6": "Learn more",
+        "about-7": "Contact Us"
+    },
+    "services": {
+        "services-1": "Study of flexibly",
+        "services-2": "Discover different careers path and industriens, along with the requried skills, educations",
+        "services-3": "Evidence of learned",
+        "services-4": "Access to a range of teaching strategies and lesson plans"
+    },
+    "section": {
+        "section-1": "Ready to start learning with us?",
+        "section-2": "Join Our Courses Faster Topics by Education Category",
+        "section-3": "Access the best Oxford IELTS Center courses for you. Learn and improve your English skills",
+        "section-4": "Join With Us",
+        "section-5": "Our Team"
+    },
+    "prices": {
+        "prices-1": "PRICING TABLE",
+        "prices-2": "Our Membership Price Plan",
+        "prices-3": "Choose the plan",
+        "prices-4": "Practice tests",
+        "prices-5": "Based materials",
+        "prices-6": "Private sessions"
+    },
+    "aboutus3": {
+        "aboutus3-1": "Successfully Trained",
+        "aboutus3-2": "Classes Completed",
+        "aboutus3-3": "Satisfaction Rate",
+        "aboutus3-4": "Students Community"
+    },
+    "testimonials": {
+        "testimonials-1": "OUR STUDENTS TESTIMONIALS",
+        "testimonials-2": "Students Say’s About Us!"
+    },
+    "footer": {
+        "footer-1": "We continually improve our educational programs so that communities can find inspiring and rewarding paths to personal and professional growth.",
+        "footer-2": "FOLLOW US ON",
+        "footer-3": "Quick Links",
+        "footer-4": "Our Team",
+        "footer-5": "Prices",
+        "footer-6": "Send a message",
+        "footer-7": "Resources",
+        "footer-8": "Location",
+        "footer-9": "Call A Taxi",
+        "footer-10": "Contact Me",
+        "footer-11": "Get in touch!",
+        "footer-12": "We offer a variety of programs adapted to modern educational standards.",
+        "footer-13": "Copyright © 2024 Oxford IELTS Center All Rights Reserved."
+    },
+    "team": {
+        "team-1": "Employes"
+    },
+    "aboutus": {
+        "aboutus-1": "WHAT WE DO",
+        "aboutus-2": "Offline Education Tailored to You",
+        "aboutus-3": "Learn In Classes",
+        "aboutus-4": "Convenient classes with small groups create the perfect environment for learning and interaction.",
+        "aboutus-5": "Expert Instructor",
+        "aboutus-6": "Experienced instructors will guide you to a higher level of knowledge and confidence.",
+        "aboutus-7": "Live Support",
+        "aboutus-8": "We’re always here to answer your questions and support your learning journey.",
+        "aboutus-9": "ABOUT OUR CENTER",
+        "aboutus-10": "Welcome to Oxford IELTS Center",
+        "aboutus-11": "Collaboratively streamline tailored learning strategies by adopting student-centered approaches, effectively empowering learners to excel. Drive skill-building and readiness for global opportunities through innovative, resource-rich educational methods.",
+        "aboutus-12": "Practical Education",
+        "aboutus-13": "With flexible courses",
+        "aboutus-14": "Advenced Learing",
+        "aboutus-15": "Study flexibly offline",
+        "aboutus-16": "Get access to our best courses",
+        "aboutus-17": "Popular methods to learn now",
+        "aboutus-18": "Find the right instructor for you",
+        "aboutus-19": "Sign Up",
+        "aboutus-20": "Courses IELTS",
+        "aboutus-21": "Learn, Grow, Succeed with our Courses",
+        "aboutus-22": "Join With Us",
+        "aboutus-23": "Courses CEFR",
+        "aboutus-24": "Get The Best Courses & Upgrade Your Skills"
+    },
+    "contacts": {
+        "contacts-1": "Have Any Questions?",
+        "contacts-2": "Have some feedback for us? Fill out the form below to contact our team.",
+        "contacts-3": "Our Address",
+        "contacts-4": "Phone Number",
+        "contacts-5": "Hours of Operation",
+        "contacts-6": "CONTACTS WITH US!",
+        "contacts-7": "Get In Touch",
+        "contacts-8": "Fill in all fields if you want to enroll in courses",
+        "contacts-9": "Message",
+        "contacts-10": "Full Name",
+        "contacts-11": "Age",
+        "contacts-12": "Select Course Type",
+        "contacts-13": "Phone Number",
+        "contacts-14": "Submit"
+    },
+    "courses": {
+        "courses-1": "Courses on",
+        "courses-2": "Grades",
+        "courses-3": "Reviews",
+        "courses-4": "Views"
+    },
+    "detail": {
+        "detail-1": "Grades",
+        "detail-2": "Reviews",
+        "detail-3": "Views",
+        "detail-4": "Rating",
+        "detail-5": "Answer",
+        "detail-6": "Rate The Course",
+        "detail-7": "Submit Review"
+    },
+    "login": {
+        "login-1": "Authorization",
+        "login-2": "Please enter your login details",
+        "login-3": "Password",
+        "login-4": "Submit",
+        "login-5": "Not registered yet?",
+        "login-6": "Sign Up"
+    },
+    "signup": {
+        "signup-1": "Registration",
+        "signup-2": "Enter Your Email",
+        "signup-3": "Enter your email to confirm",
+        "signup-4": "Send Confirmation Code",
+        "signup-5": "Already have an account?",
+        "signup-6": "Login",
+        "signup-7": "Enter Confirmation Code",
+        "signup-8": "Confirmation code has been sent to your email",
+        "signup-9": "Confirmation Code",
+        "signup-10": "Verify Code",
+        "signup-11": "Fill in all fields to register",
+        "signup-12": "Full Name",
+        "signup-13": "Password",
+        "signup-14": "Confirm Password",
+        "signup-15": "Submit"
+    },
+    "forgot": {
+        "forgot-1": "Reset Password",
+        "forgot-2": "Enter your email to reset password",
+        "forgot-3": "Enter confirmation code",
+        "forgot-4": "Confirmation code has been sent to your email",
+        "forgot-5": "Enter Your New Password",
+        "forgot-6": "Enter New Password",
+        "forgot-7": "Forgot password?",
+        "forgot-8": "Reset"
+    }
+}

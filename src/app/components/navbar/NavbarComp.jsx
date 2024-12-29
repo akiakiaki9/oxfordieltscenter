@@ -49,9 +49,26 @@ export default function Navbar() {
                 <Link href="/contacts" onClick={() => handleLinkClick('/contacts')} style={{ color: activePage === '/contacts' ? 'var(--blue-color)' : '' }}>
                     Contacts
                 </Link>
-                <div>
+                <Link href="/courses" onClick={() => handleLinkClick('/courses')} style={{ color: activePage === '/courses' ? 'var(--blue-color)' : '' }}>
+                    Courses
+                </Link>
+                <div className='navbar__book__main-1'>
+                    <Link href="/auth/login">
+                        <button className="book-button" onClick={() => handleLinkClick('/auth/login')}
+                            style={{ backgroundColor: activePage === '/auth/login' ? 'var(--blue-color)' : '', color: activePage === '/auth/login' ? '#fff' : '' }}
+                        >
+                            Log In
+                        </button>
+                    </Link>
                 </div>
             </div>
+            <Link href="/auth/login" className='navbar__book__main-2'>
+                <button className="book-button" onClick={() => handleLinkClick('/auth/login')}
+                    style={{ backgroundColor: activePage === '/auth/login' ? 'var(--blue-color)' : '', color: activePage === '/auth/login' ? '#fff' : '' }}
+                >
+                    Log In
+                </button>
+            </Link>
             {isOpen && <div className="overlay" onClick={toggleMenu} />}
         </nav>
     );

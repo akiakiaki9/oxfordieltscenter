@@ -80,7 +80,9 @@
 .coursesdet-blok__secttion-1__footer__part-1 {
     display: flex;
     justify-content: start;
+    align-items: center;
     gap: 5px;
+    margin-bottom: 15px;
 }
 
 .coursesdet-blok__section-1__footer p {
@@ -221,11 +223,6 @@
     max-width: 720px;
 }
 
-.coursesdet__reviews__footer {
-    display: flex;
-    justify-content: space-between;
-}
-
 .coursesdet__reviews__footer__p1 {
     color: var(--blue-color);
     transition: .5s;
@@ -238,9 +235,27 @@
 
 .coursesdet__reviews__footer__container {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     gap: 2px;
     align-items: center;
+}
+
+.coursesdet__reviews__footer__container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.coursesdet__reviews__footer__container__button {
+    transition: .5s;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.coursesdet__reviews__footer__container__button:hover {
+    color: var(--blue-color);
 }
 
 .coursesdet__reviews__footer__icon {
@@ -264,6 +279,21 @@
     color: var(--blue-color);
 }
 
+.coursesdet-blok__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.coursesdet__loadmore {
+    padding: 5px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.coursesdet__loadmore:hover {
+    opacity: .7;
+}
 
 @media (max-width: 1070px) {
 

@@ -30,6 +30,7 @@
 }
 
 .footer-blok__section-1 p {
+    display: none;
     color: var(--light-color);
     max-width: 340px;
     margin-bottom: 20px;
@@ -213,6 +214,9 @@
     .footer-blok__section-1 {
         align-items: center;
         text-align: center;
+    }
+    .footer-blok__section-1 p {
+        display: block;
     }
     .footer-blok__section-2 {
         justify-content: center;

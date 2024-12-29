@@ -1,16 +1,17 @@
+'use client'
 import axios from 'axios';
 import Link from 'next/link';
 import React from 'react'
 import { FaBook } from "react-icons/fa";
 import { GiBlackBook } from "react-icons/gi";
-import { FaLongArrowAltRight } from "react-icons/fa";   
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 export default async function ServicesComp() {
     let data = null;
     let hasError = false;
 
     try {
-        const res = await axios.get('http://127.0.0.1:8000/courses');
+        const res = await axios.get('https://oxfordstudycenter-production.up.railway.app/api/courses/');
         if (res.status >= 200 && res.status < 300) {
             data = res.data; // Используем res.data для получения данных
         } else {
@@ -34,10 +35,10 @@ export default async function ServicesComp() {
                             <>
                                 <div className="services-blok__section__container-part">
                                     <div className="services-icon"><FaBook className='services__icon' /></div>
-                                    <h2>Study of flexibly</h2>
-                                    <p>Discover different careers path and industriens, along with the requried skills, educations</p>
+                                    <h2>No Data Available</h2>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, voluptatibus adipisci architecto eos at vitae.</p>
                                     <div className="services-img">
-                                        <img src="/images/service1.jpg" alt="Oxford IELTS Center" />
+                                        <img src="/images/nodata.jpg" alt="No Data" />
                                         <Link href="/courses" className="services-overlay">
                                             <div className="services-overlay-icon"><FaLongArrowAltRight className='services-overlay__icon' /></div>
                                         </Link>
@@ -45,10 +46,10 @@ export default async function ServicesComp() {
                                 </div>
                                 <div className="services-blok__section__container-part">
                                     <div className="services-icon"><GiBlackBook className='services__icon' /></div>
-                                    <h2>Evidence of learned</h2>
-                                    <p>Access to a range of teaching strategies and lesson plans</p>
+                                    <h2>No Data Available</h2>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, voluptatibus adipisci architecto eos at vitae.</p>
                                     <div className="services-img">
-                                        <img src="/images/service2.jpg" alt="Oxford IELTS Center" />
+                                        <img src="/images/nodata.jpg" alt="No Data" />
                                         <Link href="/courses" className="services-overlay">
                                             <div className="services-overlay-icon"><FaLongArrowAltRight className='services-overlay__icon' /></div>
                                         </Link>
@@ -59,11 +60,11 @@ export default async function ServicesComp() {
                             data.map(course => (
                                 <div className="services-blok__section__container-part" key={course.id}>
                                     <div className="services-icon"><GiBlackBook className='services__icon' /></div>
-                                    <h2>{course.title}</h2>
-                                    <p>{course.subtitle}</p>
+                                    <h2>{course.name}</h2>
+                                    <p>{course.description}</p>
                                     <div className="services-img">
-                                        <img src={course.image} alt={course.title} />
-                                        <Link href="/courses" className="services-overlay">
+                                        <img src={course.image} alt={`Oxford IELTS Center ${course.name}`} />
+                                        <Link href={`/courses/${course.id}`} className="services-overlay">
                                             <div className="services-overlay-icon"><FaLongArrowAltRight className='services-overlay__icon' /></div>
                                         </Link>
                                     </div>
