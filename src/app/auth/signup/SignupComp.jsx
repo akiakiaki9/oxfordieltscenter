@@ -37,6 +37,7 @@ export default function SignupComp() {
             // Сохранение токенов в cookies
             Cookies.set('access', response.data.access, { path: '/' });
             Cookies.set('refresh', response.data.refresh, { path: '/' });
+            Cookies.set('userId', response.data.user_id, { path: '/' });
             setStep(2);
         } catch (error) {
             console.error('Error sending email:', error.response?.data || error.message);
