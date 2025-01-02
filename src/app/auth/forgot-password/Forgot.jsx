@@ -150,6 +150,7 @@ export default function ForgotComp() {
 
             Cookies.set('access', response.data.access, { path: '/' });
             Cookies.set('refresh', response.data.refresh, { path: '/' });
+            Cookies.set('userId', response.data.user_id, { path: '/' });
             router.push('/');
         } catch (error) {
             console.error('Registration error:', error.response?.data || error.message);

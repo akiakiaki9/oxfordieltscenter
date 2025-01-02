@@ -134,8 +134,8 @@ export default function CommentList({ data }) {
                             )}
 
                             <div className="coursesdet__reviews__footer">
-                                {/* <div className="coursesdet__reviews__footer__container">
-                                    <div>
+                                <div className="coursesdet__reviews__footer__container">
+                                    {/* <div>
                                         <FaThumbsUp
                                             onClick={() => handleLike(review.id)}
                                             className={review.is_user_liked ? 'liked' : ''}
@@ -143,11 +143,11 @@ export default function CommentList({ data }) {
                                         <p className="coursesdet__reviews__footer__like-count">
                                             {review.likes_count || 0}
                                         </p>
-                                    </div>
+                                    </div> */}
                                     {review.author.id === currentUserID && (
                                         <EditDeleteComp review={review} data={data} />
                                     )}
-                                </div> */}
+                                </div>
                             </div>
                         </>
                     )}

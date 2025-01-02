@@ -34,7 +34,6 @@ export default function LoginComp() {
                 Cookies.set('access', response.data.access, { path: '/' });
                 Cookies.set('refresh', response.data.refresh, { path: '/' });
                 Cookies.set('userId', response.data.user_id, { path: '/' });
-
                 alert('Login successful!');
                 router.push('/');
             }
