@@ -144,6 +144,7 @@ export default function CommentList({ data }) {
                                             {review.likes_count || 0}
                                         </p>
                                     </div> */}
+                                    <div></div>
                                     {review.author.id === currentUserID && (
                                         <EditDeleteComp review={review} data={data} />
                                     )}
