@@ -21,7 +21,7 @@ export default function ForgotComp() {
         setIsLoading(true);
 
         try {
-            const response = await axios.post('https://oxfordstudycenter-production.up.railway.app/api/users/forgot-password/',
+            const response = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/users/forgot-password/',
                 { email: email },
                 { headers: { 'Content-Type': 'application/json' } });
 
@@ -52,7 +52,7 @@ export default function ForgotComp() {
             }
 
             try {
-                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/api/login/refresh/', {
+                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/login/refresh/', {
                     refresh: refreshToken
                 }, {
                     headers: {
@@ -72,7 +72,7 @@ export default function ForgotComp() {
         }
 
         try {
-            const response = await axios.post('https://oxfordstudycenter-production.up.railway.app/users/verify/', {
+            const response = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/users/verify/', {
                 email: email,
                 code: confirmationCode,
             }, {
@@ -116,7 +116,7 @@ export default function ForgotComp() {
             }
 
             try {
-                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/api/login/refresh/', {
+                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/login/refresh/', {
                     refresh: refreshToken
                 },
                     {
@@ -137,7 +137,7 @@ export default function ForgotComp() {
         }
 
         try {
-            const response = await axios.put('https://oxfordstudycenter-production.up.railway.app/api/users/reset-password/', {
+            const response = await axios.put('https://oxfordstudycenter-production.up.railway.app/en/api/users/reset-password/', {
                 password: password,
                 confirm_password: confirmPassword
             },

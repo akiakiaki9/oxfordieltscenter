@@ -31,7 +31,7 @@ export default function EditDeleteComp({ data, review }) {
                 return;
             }
             try {
-                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/api/login/refresh/', {
+                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/login/refresh/', {
                     refresh: refreshToken
                 }, {
                     headers: { 'Content-Type': 'application/json' }
@@ -48,7 +48,7 @@ export default function EditDeleteComp({ data, review }) {
 
         try {
             await axios.delete(
-                `https://oxfordstudycenter-production.up.railway.app/api/review/delete/${reviewToDelete}/`,
+                `https://oxfordstudycenter-production.up.railway.app/en/api/review/delete/${reviewToDelete}/`,
                 {
                     headers: { Authorization: `Bearer ${accessToken}` },
                 }
@@ -85,7 +85,7 @@ export default function EditDeleteComp({ data, review }) {
             }
 
             try {
-                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/api/login/refresh/', {
+                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/login/refresh/', {
                     refresh: refreshToken
                 }, {
                     headers: { 'Content-Type': 'application/json' }
@@ -102,7 +102,7 @@ export default function EditDeleteComp({ data, review }) {
 
         try {
             const response = await axios.patch(
-                `https://oxfordstudycenter-production.up.railway.app/api/review/update/${reviewToEdit.id}/`,
+                `https://oxfordstudycenter-production.up.railway.app/en/api/review/update/${reviewToEdit.id}/`,
                 {
                     course: data.id,
                     comment: editText

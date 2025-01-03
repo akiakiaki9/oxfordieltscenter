@@ -26,7 +26,7 @@ export default function AddFeedback({ data }) {
             }
 
             try {
-                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/api/login/refresh/', {
+                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/login/refresh/', {
                     refresh: refreshToken
                 }, {
                     headers: {
@@ -45,7 +45,7 @@ export default function AddFeedback({ data }) {
         }
 
         try {
-            const response = await axios.post('https://oxfordstudycenter-production.up.railway.app/api/rating/', {
+            const response = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/rating/', {
                 course: data.id,
                 rating: selectedRating
             }, {
@@ -59,7 +59,7 @@ export default function AddFeedback({ data }) {
         } catch (error) {
             if (error.response?.status === 400) {
                 try {
-                    const updateResponse = await axios.put('https://oxfordstudycenter-production.up.railway.app/api/rating/', {
+                    const updateResponse = await axios.put('https://oxfordstudycenter-production.up.railway.app/en/api/rating/', {
                         course: data.id,
                         rating: selectedRating
                     }, {

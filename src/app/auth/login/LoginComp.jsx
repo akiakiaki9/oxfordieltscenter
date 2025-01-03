@@ -21,7 +21,7 @@ export default function LoginComp() {
 
         try {
             const response = await axios.post(
-                `https://oxfordstudycenter-production.up.railway.app/api/users/login/`, {
+                `https://oxfordstudycenter-production.up.railway.app/en/api/users/login/`, {
                 email: formData.email,
                 password: formData.password
             }, {

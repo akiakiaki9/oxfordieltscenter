@@ -53,7 +53,7 @@ export default function CommentList({ data }) {
                 return;
             }
             try {
-                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/api/login/refresh/', {
+                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/login/refresh/', {
                     refresh: refreshToken
                 }, { headers: { 'Content-Type': 'application/json' } });
 
@@ -67,7 +67,7 @@ export default function CommentList({ data }) {
         }
 
         try {
-            const response = await axios.post(`https://oxfordstudycenter-production.up.railway.app/api/review/${reviewId}/like/`,
+            const response = await axios.post(`https://oxfordstudycenter-production.up.railway.app/en/api/review/${reviewId}/like/`,
                 { headers: { Authorization: `Bearer ${accessToken}` } });
             // Вызов функции для обновления отзывов
             setReviews((prevReviews) => updatedReviews(prevReviews, reviewId, response.data));
