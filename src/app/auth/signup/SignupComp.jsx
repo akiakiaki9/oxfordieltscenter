@@ -18,7 +18,6 @@ export default function SignupComp() {
     const [step, setStep] = useState(1);
     const router = useRouter();
 
-    // Обработка изменений в инпутах
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -40,7 +39,7 @@ export default function SignupComp() {
             Cookies.set('userId', response.data.user_id, { path: '/' });
             setStep(2);
         } catch (error) {
-            console.error('Error sending email:', error.response?.data || error.message);
+            // console.error('Error sending email:', error.response?.data || error.message);
             setError('Failed to send confirmation code.');
         } finally {
             setIsLoading(false);
@@ -55,7 +54,6 @@ export default function SignupComp() {
         const refreshToken = Cookies.get('refresh');
         setIsLoading(true);
 
-        // Если accessToken отсутствует, пытаемся обновить его с помощью refreshToken
         if (!accessToken) {
             if (!refreshToken) {
                 setError('Error token');
@@ -77,7 +75,7 @@ export default function SignupComp() {
                 setIsLoading(false);
                 return; // После обновления токенов, выходим из функции, чтобы пользователь не отправил форму повторно
             } catch (refreshError) {
-                console.error('Error refreshing token:', refreshError.response?.data || refreshError.message);
+                // console.error('Error refreshing token:', refreshError.response?.data || refreshError.message);
                 setError('Failed to refresh access token.');
                 setIsLoading(false);
                 return;
@@ -101,7 +99,7 @@ export default function SignupComp() {
                 setError('Invalid confirmation code.');
             }
         } catch (error) {
-            console.error('Error verifying code:', error.response?.data || error.message);
+            // console.error('Error verifying code:', error.response?.data || error.message);
             setError('Failed to verify confirmation code.');
         } finally {
             setIsLoading(false);
@@ -142,7 +140,7 @@ export default function SignupComp() {
                 setIsLoading(false);
                 return;
             } catch (refreshError) {
-                console.error('Error refreshing token:', refreshError.response?.data || refreshError.message);
+                // console.error('Error refreshing token:', refreshError.response?.data || refreshError.message);
                 setError('Failed to refresh access token.');
                 setIsLoading(false);
                 return;
@@ -169,7 +167,7 @@ export default function SignupComp() {
             router.push('/')
             alert('You\'ve successfully registered!');
         } catch (error) {
-            console.error('Registration error:', error.response?.data || error.message);
+            // console.error('Registration error:', error.response?.data || error.message);
             setError('Registration error.');
         } finally {
             setIsLoading(false);

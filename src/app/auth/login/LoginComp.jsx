@@ -38,7 +38,7 @@ export default function LoginComp() {
                 router.push('/');
             }
         } catch (err) {
-            console.error('Error during login:', err.response?.data || err.message);
+            // console.error('Error during login:', err.response?.data || err.message);
             setError('Incorrect email or password!');
         } finally {
             setIsLoading(false);

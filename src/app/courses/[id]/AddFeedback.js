@@ -37,7 +37,7 @@ export default function AddFeedback({ data }) {
                 Cookies.set('access', refreshResponse.data.access, { path: '/' });
                 return;
             } catch (refreshError) {
-                console.error('Error refreshing token:', refreshError.response?.data || refreshError.message);
+                // console.error('Error refreshing token:', refreshError.response?.data || refreshError.message);
                 setMessage('Failed to refresh access token.');
                 router.push('/auth/login');
                 return;
@@ -71,11 +71,11 @@ export default function AddFeedback({ data }) {
                         setCurrentRating(selectedRating); // Устанавливаем текущий рейтинг только после успешного ответа 
                     }
                 } catch (updateError) {
-                    console.error('Error putting rating:', updateError.response?.data?.message || updateError.message);
+                    // console.error('Error putting rating:', updateError.response?.data?.message || updateError.message);
                     setMessage('Error putting rating');
                 }
             } else {
-                console.error('Error submitting rating:', error.response?.data?.message || error.message);
+                // console.error('Error submitting rating:', error.response?.data?.message || error.message);
                 setMessage('Error submitting rating');
             }
         }

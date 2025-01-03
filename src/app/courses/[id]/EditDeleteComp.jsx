@@ -40,7 +40,7 @@ export default function EditDeleteComp({ data, review }) {
                 Cookies.set('access', refreshResponse.data.access, { path: '/' });
                 return;
             } catch (refreshError) {
-                console.error('Error refreshing token:', refreshError.response?.data || refreshError.message);
+                // console.error('Error refreshing token:', refreshError.response?.data || refreshError.message);
                 router('/auth/login')
                 return;
             }
@@ -57,7 +57,7 @@ export default function EditDeleteComp({ data, review }) {
             setReviews((prevReviews) => prevReviews.filter((review) => review.id !== reviewToDelete));
             setSuccessfully('Review deleted successfully.');
         } catch (error) {
-            console.error('Error deleting review:', error);
+            // console.error('Error deleting review:', error);
             setError('Error deleting review.');
         }
         setShowDeleteModal(false);
@@ -94,7 +94,7 @@ export default function EditDeleteComp({ data, review }) {
                 Cookies.set('access', refreshResponse.data.access, { path: '/' });
                 await handleEditSave();
             } catch (refreshError) {
-                console.error('Error refreshing token:', refreshError.response?.data || refreshError.message);
+                // console.error('Error refreshing token:', refreshError.response?.data || refreshError.message);
                 router.push('/auth/login')
                 return;
             }
@@ -120,7 +120,7 @@ export default function EditDeleteComp({ data, review }) {
             setShowEditModal(false);
             setSuccessfully('Review updated successfully.');
         } catch (error) {
-            console.error('Error editing review:', error);
+            // console.error('Error editing review:', error);
             setError('Error updating review.');
             router.push('/auth/login/')
         }

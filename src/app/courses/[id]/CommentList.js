@@ -60,7 +60,7 @@ export default function CommentList({ data }) {
                 Cookies.set('access', refreshResponse.data.access, { path: '/' });
                 return;
             } catch (refreshError) {
-                console.error('Error refreshing token:', refreshError.response?.data || refreshError.message);
+                // console.error('Error refreshing token:', refreshError.response?.data || refreshError.message);
                 router('/auth/login');
                 return;
             }
@@ -72,7 +72,7 @@ export default function CommentList({ data }) {
             // Вызов функции для обновления отзывов
             setReviews((prevReviews) => updatedReviews(prevReviews, reviewId, response.data));
         } catch (error) {
-            console.error('Error liking review:', error.response?.data || error.message);
+            // console.error('Error liking review:', error.response?.data || error.message);
             setMessage('Failed to like the review');
         }
     };
