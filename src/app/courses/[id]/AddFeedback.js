@@ -95,7 +95,7 @@ export default function AddFeedback({ data }) {
             }
 
             try {
-                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/api/login/refresh/', {
+                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/login/refresh/', {
                     refresh: refreshToken
                 }, {
                     headers: {
