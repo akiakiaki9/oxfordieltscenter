@@ -17,7 +17,7 @@ export default function Detail({ params }) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(`https://oxfordstudycenter-production.up.railway.app/api/courses/${id}`);
+                const res = await fetch(`https://oxfordstudycenter-production.up.railway.app/en/api/courses/${id}`);
                 if (res.ok) {
                     const json = await res.json();
                     setData(json);

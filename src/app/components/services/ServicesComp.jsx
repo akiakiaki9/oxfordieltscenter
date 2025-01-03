@@ -11,7 +11,7 @@ export default async function ServicesComp() {
     let hasError = false;
 
     try {
-        const res = await axios.get('https://oxfordstudycenter-production.up.railway.app/api/courses/');
+        const res = await axios.get('https://oxfordstudycenter-production.up.railway.app/en/api/courses/');
         if (res.status >= 200 && res.status < 300) {
             data = res.data; // Используем res.data для получения данных
         } else {
