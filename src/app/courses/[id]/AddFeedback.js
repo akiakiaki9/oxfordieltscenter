@@ -114,7 +114,7 @@ export default function AddFeedback({ data }) {
         }
 
         try {
-            const response = await axios.post('https://oxfordstudycenter-production.up.railway.app/api/review/create/', {
+            const response = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/review/create/', {
                 course: data.id,
                 comment: review,
                 author: Cookies.get('userId')
