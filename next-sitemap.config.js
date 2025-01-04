@@ -17,9 +17,8 @@ const config = {
                 disallow: ['/private'], // Пример настройки для конкретного бота
             },
         ],
-        additionalSitemaps: [
-            'https://oxfordieltscenter.uz/sitemap-1.xml', // Укажите дополнительные карты сайта, если они есть
-        ],
+        // Уберите или оставьте пустым, если дополнительных карт сайта нет
+        additionalSitemaps: [],
     },
 };
 
