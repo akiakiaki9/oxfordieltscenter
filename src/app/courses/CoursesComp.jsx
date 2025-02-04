@@ -12,7 +12,7 @@ export default async function CoursesComp() {
     let hasError = false;
 
     try {
-        const res = await axios.get('https://oxfordstudycenter-production.up.railway.app/en/api/courses/');
+        const res = await axios.get('http://127.0.0.1:8000/api/courses/');
         if (res.status >= 200 && res.status < 300) {
             data = res.data;
         } else {

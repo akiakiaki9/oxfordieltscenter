@@ -31,7 +31,7 @@ export default function EditDeleteComp({ data, review }) {
                 return;
             }
             try {
-                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/login/refresh/', {
+                const refreshResponse = await axios.post('http://127.0.0.1:8000/api/login/refresh/', {
                     refresh: refreshToken
                 }, {
                     headers: { 'Content-Type': 'application/json' }
@@ -102,7 +102,7 @@ export default function EditDeleteComp({ data, review }) {
 
         try {
             const response = await axios.patch(
-                `https://oxfordstudycenter-production.up.railway.app/en/api/review/update/${reviewToEdit.id}/`,
+                `http://127.0.0.1:8000/api/review/update/${reviewToEdit.id}/`,
                 {
                     course: data.id,
                     comment: editText

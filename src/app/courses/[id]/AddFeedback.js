@@ -26,7 +26,7 @@ export default function AddFeedback({ data }) {
             }
 
             try {
-                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/login/refresh/', {
+                const refreshResponse = await axios.post('http://127.0.0.1:8000/api/login/refresh/', {
                     refresh: refreshToken
                 }, {
                     headers: {
@@ -45,7 +45,7 @@ export default function AddFeedback({ data }) {
         }
 
         try {
-            const response = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/rating/', {
+            const response = await axios.post('http://127.0.0.1:8000/api/rating/', {
                 course: data.id,
                 rating: selectedRating
             }, {
@@ -59,7 +59,7 @@ export default function AddFeedback({ data }) {
         } catch (error) {
             if (error.response?.status === 400) {
                 try {
-                    const updateResponse = await axios.put('https://oxfordstudycenter-production.up.railway.app/en/api/rating/', {
+                    const updateResponse = await axios.put('http://127.0.0.1:8000/api/rating/', {
                         course: data.id,
                         rating: selectedRating
                     }, {
@@ -95,7 +95,7 @@ export default function AddFeedback({ data }) {
             }
 
             try {
-                const refreshResponse = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/login/refresh/', {
+                const refreshResponse = await axios.post('http://127.0.0.1:8000/api/login/refresh/', {
                     refresh: refreshToken
                 }, {
                     headers: {
@@ -114,7 +114,7 @@ export default function AddFeedback({ data }) {
         }
 
         try {
-            const response = await axios.post('https://oxfordstudycenter-production.up.railway.app/en/api/review/create/', {
+            const response = await axios.post('http://127.0.0.1:8000/api/review/create/', {
                 course: data.id,
                 comment: review,
                 author: Cookies.get('userId')

@@ -23,7 +23,7 @@ export default function ContactsComp() {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get('https://oxfordstudycenter-production.up.railway.app/api/courses/');
+        const response = await axios.get('http://127.0.0.1:8000/api/courses/');
         setCourses(response.data);
       } catch (error) {
         console.error('Error fetching courses:', error.message);
