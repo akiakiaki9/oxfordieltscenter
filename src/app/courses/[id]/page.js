@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react'
 import Navbar from '@/app/components/navbar/NavbarComp'
-import Footer from '@/app/components/footer/footer'
 import CoursesDetail from './CoursesDetail'
 import Link from 'next/link'
 import { FaArrowRight } from "react-icons/fa6";
