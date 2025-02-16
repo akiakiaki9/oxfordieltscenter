@@ -2,7 +2,7 @@ import React from 'react';
 import CoursesComp from './CoursesComp';
 import Navbar from '../components/navbar/NavbarComp';
 import Title from '../components/title/title';
-import Footer from '../components/footer/footer';
+import FooterComp from '../components/footer/FooterComp';
 
 export async function generateMetadata() {
     return {
@@ -32,7 +32,7 @@ export default function Courses() {
             <Navbar />
             <Title />
             <CoursesComp />
-            <Footer />
+            <FooterComp />
         </div>
     );
 };

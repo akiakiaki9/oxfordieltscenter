@@ -2,7 +2,7 @@ import React from 'react'
 import Title from '../components/title/title'
 import AboutUs from './AboutUs'
 import Navbar from '../components/navbar/NavbarComp'
-import Footer from '../components/footer/footer'
+import FooterComp from '../components/footer/FooterComp'
 
 export async function generateMetadata() {
     return {
@@ -32,7 +32,7 @@ export default function aboutus() {
             <Navbar />
             <Title />
             <AboutUs />
-            <Footer />
+            <FooterComp />
         </div>
     )
 };

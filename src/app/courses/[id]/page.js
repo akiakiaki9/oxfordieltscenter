@@ -7,6 +7,7 @@ import CoursesDetail from './CoursesDetail'
 import Link from 'next/link'
 import { FaArrowRight } from "react-icons/fa6";
 import Loading from '@/app/components/Loading'
+import FooterComp from '@/app/components/footer/FooterComp'
 
 export default function Detail({ params }) {
     const { id } = React.use(params);
@@ -22,8 +23,6 @@ export default function Detail({ params }) {
                     const json = await res.json();
                     setData(json);
                 }
-            } catch (error) {
-                console.error('Error fetching course data:', error);
             } finally {
                 setLoading(false);
             }
@@ -77,7 +76,7 @@ export default function Detail({ params }) {
                 </div>
             </div>
             <CoursesDetail data={data} />
-            <Footer />
+            <FooterComp />
         </div>
     )
 };

@@ -1,30 +1,28 @@
 import AboutUs3 from "./about-us/AboutUs3";
-import About from "./components/about/about";
-import Footer from "./components/footer/footer";
-import Header from "./components/header/header";
-import Navbar from "./components/navbar/NavbarComp";
-import Partners from "./components/partners/partners";
-import Prices from "./components/prices/prices";
-import Section from "./components/section/section";
-import Services from "./components/services/services";
-import Testimonials from "./components/testimonials/testimonials";
+import AboutComp from "./components/about/AboutComp";
+import FooterComp from "./components/footer/FooterComp";
+import HeaderComp from "./components/header/HeaderComp";
+import NavbarComp from "./components/navbar/NavbarComp";
+import PartnersComp from "./components/partners/PartnersComp";
+import PricesComp from "./components/prices/PricesComp";
+import SectionComp from "./components/section/SectionComp";
+import TestimonialsComp from "./components/testimonials/TestimonialsComp";
 import YandexHome from "./components/YandexHome";
 
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
-      <Header />
-      <About />
-      <Partners />
-      <Services />
-      <Section />
-      <Prices />
+      <NavbarComp />
+      <HeaderComp />
+      <AboutComp />
+      <PartnersComp />
+      <SectionComp />
+      <PricesComp />
       <AboutUs3 />
-      <Testimonials />
+      <TestimonialsComp />
       <YandexHome />
-      <Footer />
+      <FooterComp />
     </div>
   );
 };

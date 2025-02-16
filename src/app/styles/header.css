@@ -4,11 +4,9 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    background-image: url('/images/header.bg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.886), rgba(0, 0, 0, 0.574)), url('/images/header.bg.jpg');
     background-size: cover;
     background-position: center;
-    background-blend-mode: multiply;
-    background-color: #0000009f;
 }
 
 .header-blok {
@@ -80,24 +78,10 @@
         padding: 10px;
         align-items: center;
     }
-}
-
-@media (max-width: 667px) {
     .header__h1-1 {
-        font-size: 200%;
+        font-size: 100%;
     }
-    
     .header__h1-2 {
-        font-size: 300%;
-    }
-}
-
-@media (max-width: 480px) {
-    .header {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.221), rgba(0, 0, 0, 0.178)), url('/images/header.bg.jpg');
-        background-position: center;
-        background-size: contain;
-        background-attachment: local;
-        background-size: cover;
+        font-size: 250%;
     }
 }

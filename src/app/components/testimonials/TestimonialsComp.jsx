@@ -4,7 +4,7 @@ import '@splidejs/splide/dist/css/splide.min.css';
 import { reviews } from '@/app/utils/reviews';
 import { FaBook } from "react-icons/fa";
 
-export default function Testimonials() {
+export default function TestimonialsComp() {
     return (
         <div className="testimonials">
             <div className="testimonial-container">

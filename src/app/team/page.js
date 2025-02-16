@@ -1,7 +1,7 @@
 import Navbar from '../components/navbar/NavbarComp';
 import Title from '../components/title/title';
 import TeamComp from './TeamComp';
-import Footer from '../components/footer/footer';
+import FooterComp from '../components/footer/FooterComp';
 
 export function generateMetadata() {
     return {
@@ -31,7 +31,7 @@ export default function Team() {
             <Navbar />
             <Title />
             <TeamComp />
-            <Footer />
+            <FooterComp />
         </div>
     );
 };

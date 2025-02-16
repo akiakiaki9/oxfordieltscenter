@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { RiMenu3Fill } from "react-icons/ri";
 
-export default function Navbar() {
+export default function NavbarComp() {
     const [isOpen, setIsOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
     const pathname = usePathname();
