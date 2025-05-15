@@ -64,9 +64,14 @@ export default function RootLayout({ children }) {
     gtag('config', 'G-64GLC3TRJW');
   `}
         </Script>
-
       </head>
       <body>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8855410666957906"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         {children}
       </body>
     </html>
