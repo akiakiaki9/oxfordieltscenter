@@ -49,6 +49,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="yandex-verification" content="66b3de2d4c1f17d3" />
         <meta name="msvalidate.01" content="9727FEB9B9A0FBF3F14C214D959E9BB5" />
+        <meta name="google-adsense-account" content="ca-pub-8855410666957906"></meta>
         <link rel="icon" href="/images/oxfordlogo.png" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-64GLC3TRJW"
@@ -66,12 +67,7 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8855410666957906"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        
         {children}
       </body>
     </html>
