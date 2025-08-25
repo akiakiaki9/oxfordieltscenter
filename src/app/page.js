@@ -8,12 +8,13 @@ import PricesComp from "./components/prices/PricesComp";
 import SectionComp from "./components/section/SectionComp";
 import TestimonialsComp from "./components/testimonials/TestimonialsComp";
 import YandexHome from "./components/YandexHome";
+import Error404 from "./Error404";
 
 
 export default function Home() {
   return (
     <div>
-      <NavbarComp />
+      {/* <NavbarComp />
       <HeaderComp />
       <AboutComp />
       <PartnersComp />
@@ -22,7 +23,8 @@ export default function Home() {
       <AboutUs3 />
       <TestimonialsComp />
       <YandexHome />
-      <FooterComp />
+      <FooterComp /> */}
+      <Error404 />
     </div>
   );
 };
