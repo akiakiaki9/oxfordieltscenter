@@ -14,7 +14,7 @@ import Error404 from "./Error404";
 export default function Home() {
   return (
     <div>
-      {/* <NavbarComp />
+      <NavbarComp />
       <HeaderComp />
       <AboutComp />
       <PartnersComp />
@@ -23,8 +23,8 @@ export default function Home() {
       <AboutUs3 />
       <TestimonialsComp />
       <YandexHome />
-      <FooterComp /> */}
-      <Error404 />
+      <FooterComp />
+      {/* <Error404 /> */}
     </div>
   );
 };
